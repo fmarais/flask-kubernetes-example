@@ -11,6 +11,6 @@ RUN apk --update add --virtual build-base \
 WORKDIR /deploy/app
 COPY . /deploy/
 
-EXPOSE 5000
+EXPOSE 5000 4444
 
 CMD ["gunicorn", "--config", "/deploy/gunicorn.cfg", "server:app"]
