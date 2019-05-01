@@ -1,7 +1,7 @@
 # Flask Example for Docker and Kubernetes with Debugging
 
 
-## To Build in kubernetes
+## To build in kubernetes
 ```
 ## --- docker
 ## Clone repo
@@ -39,7 +39,7 @@ now connect using nc
 ```
 
 
-## One liner, Rebuild docker image, remove old kubernetes deploy, create new deploy
+## One liner, rebuild docker image, remove old kubernetes deploy, create new deploy
 ```
 > cd ~/projects/python/flask-kubernetes-example && docker build -t flask-kubernetes-example:0.0.1 . && kb delete deploy flask-kubernetes-example && kubectl run flask-kubernetes-example --image=flask-kubernetes-example:0.0.1 --image-pull-policy=Never --labels="app=flask-kubernetes-example"
 ```
