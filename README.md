@@ -33,7 +33,7 @@ Important note: You have to run eval $(minikube docker-env) on each terminal you
 Hello world!
 
 ## Curl debug start
-> curl http://<minikube ip>:<web cluster port>
+> curl http://<minikube ip>:<web cluster port>/debug
 now connect using nc
 > nc <minikube ip> <debug cluster port>
 ```
@@ -51,7 +51,7 @@ web (python flask):
 	docker container (Dockerfile): 5000
 	node port (service.yaml ): 5001
 	cluster port: 3xxxx
-	connect: > curl http://<minikube ip>:<web cluster port>
+	connect: > curl http://<minikube ip>:<web cluster port>/debug
 
 debug (rpdb):
 	docker container (Dockerfile): 4444
